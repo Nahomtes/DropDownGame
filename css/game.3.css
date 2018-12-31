@@ -1,0 +1,47 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+div.auto_div{
+	width: 30%;
+    	height: 30%;
+	position: absolute;
+	background-color: black;
+	color: white;
+	padding: 5px;
+	border: 2px solid;
+}
+
+
+
+div#gameScreen {
+	position: relative;
+	width: 75%;
+	left: 20%;
+	border: 2px solid red;
+}
+div#sideBar {
+	width: 20%;
+	border: 1px solid blue;
+	height: 400px;
+	top: 20%;
+	position: absolute;
+}
+div#sideBar > p {
+	margin: 10px;
+}
+
+div.container {
+	border: 1px solid Blue; padding: 8px;
+}
+div.body-container {
+	border: 1px solid Green;
+}
+
+
+
+.proceed3rdPage {
+	color: blue;
+	text-align: right;
+
+}

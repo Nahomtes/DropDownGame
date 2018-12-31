@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>DropDownGame</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		
+	</script>
+	
+	</head>
+
+
+<body>
+	cn = '<div class="grid">'
+		cn = '<div class="header">'
+			cn = 'Header'
+			cn = '<img src="image/zulatech-logo.PNG" alt="zulatech logo">'
+		cn = '</div>'
+		cn = '<div class="mainBody">'
+			cn = '<div class="sideBar">'
+				
+				cn = '<div class="backArrow">'
+					cn = '<a class="back-arrow" href="n/a">'
+						cn = '<img src="image/back-arrow.PNG" alt="back arrow">'
+						cn = '<p>Back</p>'
+					cn = '</a>'
+				cn = '</div>'
+				
+				cn = '<div class="score">'
+					cn = '<p>SCORE<p>'
+					cn = '<p>0<p>'	
+				cn = '</div>'	
+				cn = '<div class="level">'
+					cn = '<p>LEVEL<p>'
+					cn = '<p>0<p>'
+					
+				cn = '</div>'
+				
+			cn = '</div>'
+
+			cn = '<div id="re" class="gameScreen">Game Screen'
+				cn = '<img src="image/game.jpg" alt="placeHoler picture">'
+			cn = '</div>'
+				
+			cn = '<div class="blankSpace">Blank Space</div>'
+			
+	
+		cn = '</div>'
+		cn = '<div class="footer">Footer</div>'
+	cn = '</div>'
+	
+</body>
+
+</html>
+

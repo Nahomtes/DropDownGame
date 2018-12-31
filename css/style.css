@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 50fr 1fr;
+	grid-template-areas:
+	"header"
+	"mainBody"
+	"footer";
+	height: 100vh;
+}
+
+.header {
+	background-color: blue;
+	grid-area: header;
+}
+
+.mainBody {
+	grid-area: mainBody;
+	display: flex;
+	flex-direction: column;
+	
+	width: 100%;
+	height: 100%;
+	background-color: red;
+}
+
+.mainBody .sideBar {
+	background-color: white;
+	width: 100%;
+	display: flex;
+}
+
+.mainBody .sideBar .backArrow {
+	background-color: yellow;
+	flex: 1;
+
+}
+
+.mainBody .sideBar .backArrow img, p {
+	/*display: inline;
+	border: 2px solid red;*/
+}
+
+.mainBody .sideBar .score {
+	flex: 1;
+}
+
+.mainBody .sideBar .level {
+	flex: 1;
+}
+
+.mainBody .gameScreen  {
+	flex: 1;
+	background-color: black;
+	height: 100%;
+	color: white;
+}
+
+.mainBody .gameScreen img {
+	width: 100%;
+}
+
+.mainBody .blankSpace {
+	display: none;
+	background-color: green;
+}
+
+.footer {
+	background-color: pink;
+	grid-area: footer;
+}
+
+
+/*The media tells run this code only if the 
+size of the screen has minmum width of 768px */
+@media only screen and (min-width: 768px) {
+	.mainBody {
+		flex-direction: row;
+	}
+
+	.mainBody .sideBar {
+		flex: 1;
+		flex-direction: column;
+	}
+		
+	.mainBody .gameScreen {
+		flex: 10;
+	}
+
+}
+
+/*The media tells run this code only if the 
+size of the screen has minmum width of 1000px */
+@media only screen and (min-width: 1000px) {
+	.mainBody {
+		flex-direction: row;
+	}
+
+	.mainBody .sideBar {
+		flex: 1;
+		flex-direction: column;
+	}
+		
+	.mainBody .gameScreen {
+		flex: 5;
+	}
+	.mainBody .blankSpace {
+		display: block;
+		flex: 1;
+	}
+
+}
+	
+	
+	

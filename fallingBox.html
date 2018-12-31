@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+</style>
+</head>
+<body>
+<div id="sideBar"><p>Score: <input type="text" ></input></p></div>
+<div id="gameScreen"></div>
+<h1 id="h1"></h1>
+<script>
+var cnn = '';
+	cnn += '<div id="sideBar"><p>Score: <input type="text" ></input></p></div>';
+	cnn += '<div id="gameScreen"></div>';
+	cnn += '<h1 id="h1"></h1>';
+document.getElementsByTagName("BODY")[0] = cnn;
+var s1 = ' style="padding: 15px;"'
+var textHolder = '<p>1. What is the capital city of Eritrea?</p>';
+    textHolder+= '<p style="padding-left: 20px;">';
+	textHolder += '<input type="radio" name="gender" value="A"'+s1+'>A. Keren</br>';
+    textHolder+= '<input type="radio" name="gender" value="B"'+s1+'>B. Asmera</br>';
+    textHolder+= '<input type="radio" name="gender" value="C"'+s1+'>C. Mendefera</br>';
+    textHolder+= '<input type="radio" name="gender" value="D"'+s1+'>D. Aseb</br></p>';
+	function getRndInteger(min, max) {
+		return Math.floor(Math.random() * (max - min)) + min;
+	}
+	var slow = getRndInteger(100,120);
+	var slow2 = getRndInteger(75,90);
+	var medium = getRndInteger(50,60);
+	var medium2 = getRndInteger(38,45);
+	var fast = getRndInteger(29,30);
+	var fast2 = getRndInteger(12,16);
+
+	var speed = slow;
+	var strrQuestionInArray = [textHolder,textHolder,textHolder,textHolder,textHolder,textHolder,textHolder,textHolder,textHolder,textHolder]
+	container(strrQuestionInArray,speed);
+
+function container(strrQuestionInArray,speed) {
+	document.getElementById("gameScreen").style = 'height: ' + (window.innerHeight-10)+ 'px;'
+	document.getElementById("sideBar").style = 'height: ' + (window.innerHeight/3)+ 'px;'
+	///////////////////////////Populating box///////////////////////////////////////
+	
+	var positionAdjusterObj = [];
+
+	function createDivBox(top,left,strrQuestionInArray,speed){
+		
+		this.a_top = top;
+		this.a_left = left;  
+		this.create = function() {
+			for (var i = 0; i < strrQuestionInArray.length; i++){
+				
+				this.a_left = getRndInteger(0, 100-30); //randomly choice where the box apear horizontally 20% to 100%
+				var myNewDiv = new boxObj(i,this.a_top,this.a_left,strrQuestionInArray[i]); // pass resObj as argument
+				this.a_top -= getRndInteger(50,80);
+				
+				window.document.getElementById("gameScreen").innerHTML += myNewDiv.createDiv;  // create all the box
+				positionAdjusterObj[i] = new positionAdjuster(myNewDiv.top,myNewDiv.left,myNewDiv.idName,.5,speed);
+				
+				//setInterval(i);
+			}
+			
+				var r = setInterval( function() {positionAdjusterObj[0].fallDown()}, speed);
+				var r = setInterval( function() {positionAdjusterObj[1].fallDown()}, speed);
+				var r = setInterval( function() {positionAdjusterObj[2].fallDown()}, speed);
+				var r = setInterval( function() {positionAdjusterObj[3].fallDown()}, speed);
+				var r = setInterval( function() {positionAdjusterObj[4].fallDown()}, speed);
+				var r = setInterval( function() {positionAdjusterObj[5].fallDown()}, speed);
+			//	var r = setInterval( function() {positionAdjusterObj[6].fallDown()}, speed);
+				//var r = setInterval( function() {positionAdjusterObj[7].fallDown()}, speed);
+				//var r = setInterval( function() {positionAdjusterObj[8].fallDown()}, speed);
+				//var r = setInterval( function() {positionAdjusterObj[9].fallDown()}, speed);
+			
+		
+			return;
+		}
+	}
+	function boxObj(idName,b_top, b_left,textToPutOnIndexDiv){ // add resObj as argument, change the idName with the id from DB auto increment
+		var cn='';
+		cn += '<div class="auto_div" id="box_'+idName+'"style="position: absolute;';
+		cn += ' top: '+b_top+'%; left: '+b_left+'%; background-color: green;">';
+		cn += textToPutOnIndexDiv;  
+		cn += '</div>';
+		
+		this.createDiv = cn;
+		
+		this.idName = "box_" + idName;
+		this.top = b_top;
+		this.left = b_left;
+
+	}
+	
+	
+	
+
+	
+	
+	var createDivBoxObj = new createDivBox(-30, -30,strrQuestionInArray,speed); // add resObj as argument
+	createDivBoxObj.create();
+	
+
+	//*******************Populating box end************************//
+
+
+	//var r = setInterval(function() {positionAdjusterObj[0].fallDown()}, speed);
+
+//	r += setInterval(function() {positionAdjusterObj[1].fallDown()}, speed);
+//setInterval(function() {positionAdjusterObj[2].fallDown()}, speed);
+///	setInterval(function() {positionAdjusterObj[3].fallDown()}, speed);
+	//setInterval(function() {positionAdjusterObj[4].fallDown()}, speed);
+	//setInterval(function() {positionAdjusterObj[5].fallDown()}, speed);
+	//setInterval(function() {positionAdjusterObj[6].fallDown()},speed);
+	//setInterval(function() {positionAdjusterObj[7].fallDown()},speed);
+//	setInterval(function() {positionAdjusterObj[8].fallDown()},speed);
+	//setInterval(function() {positionAdjusterObj[9].fallDown()},speed);
+	//setInterval(function() {positionAdjusterObj[10].fallDown()},speed); this doesn't exist
+
+		
+	function positionAdjuster(currentTop, currentLeft,divId,addNumpx,speed){
+		
+		this.currentTop = currentTop;
+		this.currentLeft = currentLeft;
+		this.divId = divId; // demo2
+		this.style1 = "";
+		this.addNumpx = addNumpx 
+		//this.mySetInterval = //alert("it's coming here");//setInterval(fallDown(), speed);
+		this.push = function(){
+			return this.currentTop + this.addNumpx; 
+		}
+		this.fallDown = function() {
+			
+			this.style1 = 'top: '+this.currentTop+'%; left: '+this.currentLeft+'%;';
+			//alert(this.t);
+			 
+			if (this.currentTop < 100-30){ // limit to the window height;
+				this.currentTop = this.push();
+				//	alert(this.t);
+				//	alert(this.style1);
+				document.getElementById(this.divId).style = this.style1;
+				//document.getElementById(this.divId).innerHTML = this.currentTop;
+			} 
+			return;
+		}
+	}
+
+	function pushFromTopBy(currtopPx, addNumPx) {
+		return currtopPx + addNumPx;   
+		
+	} 
+
+}
+
+</script>
+
+</body>
+</html>

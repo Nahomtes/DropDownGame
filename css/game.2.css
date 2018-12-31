@@ -1,0 +1,21 @@
+body { background-color: gray;}
+
+div.container {
+	border: 1px solid Blue; padding: 8px;
+}
+div.body-container {
+	border: 1px solid Green;
+}
+
+
+
+.proceed3rdPage {
+	color: blue;
+	text-align: right;
+
+}
+
+.auto_div {
+	position: absolute;
+	top: -500px;
+}

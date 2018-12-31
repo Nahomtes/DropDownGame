@@ -1,0 +1,180 @@
+
+* {
+	box-sizing: border-box;
+}
+html {
+	overflow-y: scroll;
+	
+}
+
+body {
+	background-color:#c1bdba;;
+	
+}
+
+
+a {
+	text-decoration: none; 
+	color: #1ab087;
+	
+}
+a:hover { 
+	transition: .5s;
+	color: #529482; 
+}
+
+div#sign-up {
+	display: block;
+	border: 1px dashed Green;
+}
+div#login {
+	display: Block;
+	border: 1px dashed blue;
+}
+
+.container {
+	background: rgba(19, 35, 47, 0.9);
+	border: 1px solid;
+	border-radius: 5px; 
+	padding: 40px;
+	max-width: 600px;
+	min-width: 400px;
+	margin: 40px auto;
+	
+	
+}
+.tab-group { 
+	border: 2px solid Green;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 40px 0;
+	 
+  
+}
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+li a {
+	border: 1px solid white;
+    display:block;
+	text-decoration:none;
+	padding:15px;
+    background: #435359;
+    color: white;
+    font-size:20px;
+   float:left;
+    width:33.333333333%;
+    text-align:center;
+    cursor:pointer;
+    transition: all .9s ease; 
+    
+ }
+ li a:hover {
+      background: dark;
+      color:blue;
+ }
+ 
+ li a:active {
+    background-color:#1ab188;
+    color:white;
+ }
+ li a:visited {
+
+ }
+
+ h1 {
+	text-align: center;
+	color: white;
+	font-weight: lighter;
+	margin: 0 0 40px;
+ }
+ 
+ label {
+	/* border: 1px solid;*/
+	position: absolute;
+	/* transform: translate(6px);
+	left:13px;*/
+	color: #a0b3b0;
+	transition: all 0.25s ease;
+	
+	font-size: 22px; 
+ }
+ .req { 
+	margin: 2px;
+	color: #1ab188   /*main*/
+}
+
+input {
+	font-size: 22px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 5px 10px;
+	background: none;
+	border: 1px solid #D3D3D3; /*light Gray*/
+	color: white;
+	
+	
+}
+input:focus {
+	outline: 0;
+	border-color: #1ab188;
+}
+.field-wrap {
+	position: relative;
+	margin-bottom: 40px;
+	/*border: 3px solid yellow; */
+
+}
+.top-row {
+	/*border: 1px solid blue;*/
+}
+.top-row:after {
+	content: "";
+    display: table;
+    clear: both;
+	
+}
+
+.top-row .field-wrap {
+	
+	float: left;
+	width: 48%;
+	
+}
+.top-row #firstName {
+	margin-right: 4%;
+}
+
+button {
+	
+	border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 15px 0;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	background: #1ab188; 
+	color: white;
+	transition: all .5s ease;
+	width: 100%;
+	height: 100%;
+	
+
+}
+button:hover, button:focus {
+	background: #37a285;
+}
+
+.forgot {
+	margin-top: -20px;
+	text-align: right;
+}
+
+
+ 

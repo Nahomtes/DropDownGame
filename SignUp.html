@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drop Down Game</title>
+	<link rel="stylesheet" type="text/css" href="css/SignUp.css"/>
+</head>
+<body>
+	<div class="container">
+		<ul class="tab-group">
+			<li class="sign-up-tab"><a href="#sign-up"> SIGNUP </a></li>
+			<li class="login-tab"><a href="#login"> LOGIN </a></li>
+			<li class="reset-tab"><a href="#"> RESET </a></li>
+		</ul>
+		
+	
+			
+		<div class="tab-content">
+			<div id="sign-up" >
+				<h1>Sign Up for Free</h1>
+				<form action="/" method="post">
+					<div class="top-row" >
+						<div id="firstName" class="field-wrap">
+							<label>First Name<span class="req">*</span></label>
+							<input type="text" required autocomplete="off">
+						</div>
+						<div id="lastName" class="field-wrap">
+							<label>Last Name<span class="req">*</span></label>
+							<input type="text" required autocomplete="off">
+						</div>
+						
+					</div>
+					<div class="field-wrap">
+							<label>Email Address<span class="req">*</span></label>
+							<input type="email" required autocomplete="off">
+					</div>
+					<div class="field-wrap">
+							<label>Set A Password<span class="req">*</span></label>
+							<input type="password" required autocomplete="off">
+					</div>
+					<button type="submit" class="botton">Get Started</button>
+				</form>
+			</div>  <!------------- sign-up div end here ----------------->
+				
+				
+				
+			<div id="login">
+			<h1>Welcome back!</h1>
+			
+				<form action="/" method="post">
+					<div class="field-wrap">
+						<label class="active">Email Address<span class="req">*</span></label>
+						<input type="email" required autocomplete="off">
+						
+					</div>
+					<div class="field-wrap">
+						<label>Password<span class="req">*</span></label>
+						<input type="password" required autocomplete="off">
+					</div>
+					
+					<p class="forgot"><a href="#">Forgot Password?</a></p>
+					<button type="" class="button">Log In</button>
+					
+				</form>  
+			</div> <!------------- login div end here ----------------->
+				
+			<div id="reset"></div> <!------------- reset div end here ----------------->
+		</div>
+			
+			
+	</div>		
+	
+	
+</body>
+</html>
